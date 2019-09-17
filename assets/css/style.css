@@ -232,6 +232,8 @@ INTRO
 }
 .intro__suptitle {
 	line-height: 1.45;
+	margin: 0 auto;
+	max-width: 100%;
 }
 
 /*************** 
@@ -266,10 +268,11 @@ INTRO__BUTTONS
 
 .intro__btn__slider {
 	position: absolute;
-	width: 45px;
-	height: 45px;
-	top: 45%;
-	background: url(../img/icons/left.png) no-repeat center;
+	width: 10%;
+	min-width: 50px;
+	height: 100%;
+	top: 50%;
+	background: url(../img/icons/left.png) no-repeat 40% 50%;
 	transition: background-image 0.15s linear;
 }
 
@@ -278,12 +281,13 @@ INTRO__BUTTONS
 }
 
 .intro__btn__slider__prev {
-	left: 10%;
+	transform: translate(0, -50%);
+	left: 0;
 }
 
 .intro__btn__slider__next {
-	right: 10%;
-	transform: rotate(180deg);
+	right: 0;
+	transform: rotate(180deg) translate(0, 50%);
 	background-image: url(../img/icons/left-red.png);
 }
 
@@ -1660,6 +1664,12 @@ FOOTER
 
 }
 
+@media (max-width: 1180px) {
+	.intro__suptitle {
+		max-width: 80%;
+	}
+}
+
 @media (max-width: 1090px) {
 	.super__ipad__option {
 		font-size: 16px;
@@ -1704,7 +1714,7 @@ FOOTER
 	.clients .section__main__right {
 		margin-top: 40px;
 	}
-
+}
 
 @media (max-width: 847px) {
 
@@ -1730,6 +1740,29 @@ FOOTER
 }
 
 @media (max-width: 767px) {
+
+	.intro__buttons {
+		margin-top: 20px;
+		max-width: 260px;
+	}
+
+	.intro__title {
+		line-height: 1;
+	}
+
+	.button {
+		padding: 10px 22px;
+		font-size: 15px;
+	}
+
+	.intro {
+		height: 100vh;
+		background-position: 50% 0;
+	}
+
+	.intro:after {
+		height: 100vh;
+	}
 
 	.card__services {
 		max-width: 80%;
