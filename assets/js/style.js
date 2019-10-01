@@ -21,55 +21,37 @@ circle(0, 80, '.progress__container:nth-child(2)');
 circle(0, 70, '.progress__container:nth-child(3)');
 circle(0, 90, '.progress__container:nth-child(4)');
 
+var upShot = document.getElementById('up__shot');
 
-function currentYPosition() {
-    // Firefox, Chrome, Opera, Safari
-    if (self.pageYOffset) return self.pageYOffset;
-    // Internet Explorer 6 - standards mode
-    if (document.documentElement && document.documentElement.scrollTop)
-        return document.documentElement.scrollTop;
-    // Internet Explorer 6, 7 and 8
-    if (document.body.scrollTop) return document.body.scrollTop;
-    return 0;
-}
-
-
-function elmYPosition(eID) {
-    var elm = document.getElementById(eID);
-    var y = elm.offsetTop;
-    var node = elm;
-    while (node.offsetParent && node.offsetParent != document.body) {
-        node = node.offsetParent;
-        y += node.offsetTop;
-    } return y;
-}
-
-
-function smoothScroll(eID) {
-    var startY = currentYPosition();
-    var stopY = elmYPosition(eID);
-    var distance = stopY > startY ? stopY - startY : startY - stopY;
-    if (distance < 5) {
-        scrollTo(0, stopY); return;
-    }
-    var speed = Math.round(distance / 10);
-    if (speed >= 10) speed = 10;
-    var step = Math.round(distance / 100);
-    var leapY = stopY > startY ? startY + step : startY - step;
-    var timer = 0;
-    if (stopY > startY) {
-        for ( var i=startY; i<stopY; i+=step ) {
-            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-        } return;
-    }
-    for ( var i=startY; i>stopY; i-=step ) {
-        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-    }
-}
-
-let upShot = document.getElementById('up__shot');
 upShot.addEventListener('click', () => {
-	smoothScroll('home');
+	window.scrollTo(0, 0);
+});
+
+window.addEventListener('scroll', () => {
+
+    var posY = window.pageYOffset || document.documentElement.scrollTop;
+
+    function scrollUp () {
+        var maxHeight = document.documentElement.clientHeight/3;
+        if (posY > maxHeight) {
+            up__shot.style.opacity = "0.7";
+
+        } else {
+            up__shot.style.opacity = "0";
+        }
+    }
+
+    scrollUp();
+
+    var intro = document.querySelector('.intro');
+    var header = document.querySelector('.header');
+    var height__intro = intro.offsetHeight; // высота intro
+    if (posY+1 >= height__intro) {
+        header.style.position = 'fixed';
+        header.style.backgroundColor = 'black';
+    } else {
+        header.style.position = 'absolute';
+        header.style.backgroundColor = 'rgba(255,255,255,0)';
+    }
+
 });
