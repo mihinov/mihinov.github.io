@@ -54,6 +54,47 @@ HEADER
 	z-index: 2;
 	width: 100%;
 	padding-bottom: 5px;
+	height: auto;
+	animation-duration: .5s;
+	animation-timing-function: linear;
+}
+
+.header.fixed {
+	position: fixed;
+	background-color: black;
+	animation-name: header__visible;
+}
+
+.header.unvisible {
+	animation-name: header__unvisible;
+}
+
+@keyframes header__visible{
+	0% {
+		visibility: hidden;
+		opacity: 0;
+
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes header__unvisible{
+	0% {
+		position: fixed;
+		visibility: visible;
+		opacity: 1;
+
+	}
+	99% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		position: absolute;
+	}
 }
 
 .header__inner {
@@ -1314,6 +1355,10 @@ SECTION SUPER__TEXT
 	transition: opacity 0.15s linear;
 }
 
+.up__shot.visible {
+	opacity: 0.7;
+}
+
 /*************** 
 
 SECTION BLOG
@@ -1640,15 +1685,11 @@ FOOTER
 		font-size: 16px;
 	}
 	.logo__a {
-		width: 150px;
-		height: 64.5px;
+		width: 180px; /* 100% */
+		height: 77.4px; /* 43% */
 	}
 	.logo__img {
 		width: 60%;
-	}
-
-	.header {
-		padding-bottom: 5px;
 	}
 }
 
@@ -1687,23 +1728,9 @@ FOOTER
 		max-width: 100%;
 		height: auto;
 	}
-
-	.header {
-		position: fixed;
-		background-color: black;
-		padding-bottom: 5px;
-	}
 }
 
 @media (max-width: 917px) {
-
-	.main__nav {
-		
-	}
-
-	.nav__link {
-		font-size: 14px;
-	}
 
 	.clients .section__main {
 		-webkit-flex-wrap: wrap;
