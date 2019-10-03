@@ -55,13 +55,13 @@ HEADER
 	width: 100%;
 	padding-bottom: 5px;
 	height: auto;
-	animation-duration: .5s;
+	animation-duration: 2s;
 	animation-timing-function: linear;
 }
 
 .header.fixed {
 	position: fixed;
-	background-color: black;
+	background-color: rgba(0, 0, 0, 1);
 	animation-name: header__visible;
 }
 
@@ -86,6 +86,7 @@ HEADER
 		position: fixed;
 		visibility: visible;
 		opacity: 1;
+		background-color: rgba(0, 0, 0, 1);
 
 	}
 	99% {
