@@ -34,10 +34,10 @@ window.addEventListener('scroll', () => {
     function scrollUp () {
         var maxHeight = document.documentElement.clientHeight/3;
         if (posY > maxHeight) {
-            up__shot.style.opacity = "0.7";
+            up__shot.classList.add('visible');
 
         } else {
-            up__shot.style.opacity = "0";
+            up__shot.classList.remove('visible');
         }
     }
 
@@ -47,11 +47,12 @@ window.addEventListener('scroll', () => {
     var header = document.querySelector('.header');
     var height__intro = intro.offsetHeight; // высота intro
     if (posY+1 >= height__intro) {
-        header.style.position = 'fixed';
-        header.style.backgroundColor = 'black';
+        header.classList.add('fixed');
+        header.classList.remove('unvisible');
     } else {
-        header.style.position = 'absolute';
-        header.style.backgroundColor = 'rgba(255,255,255,0)';
+        header.classList.add('unvisible');
+        header.classList.remove('fixed');
     }
 
 });
+
