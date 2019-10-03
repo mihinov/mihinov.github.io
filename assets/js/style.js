@@ -48,9 +48,7 @@ window.addEventListener('scroll', () => {
     var height__intro = intro.offsetHeight; // высота intro
     if (posY+1 >= height__intro) {
         header.classList.add('fixed');
-        header.classList.remove('unvisible');
     } else {
-        header.classList.add('unvisible');
         header.classList.remove('fixed');
     }
 
