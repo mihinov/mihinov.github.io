@@ -65,10 +65,6 @@ HEADER
 	animation-name: header__visible;
 }
 
-.header.unvisible {
-	animation-name: header__unvisible;
-}
-
 @keyframes header__visible{
 	0% {
 		visibility: hidden;
@@ -78,23 +74,6 @@ HEADER
 	100% {
 		visibility: visible;
 		opacity: 1;
-	}
-}
-
-@keyframes header__unvisible{
-	0% {
-		position: fixed;
-		visibility: visible;
-		opacity: 1;
-		background-color: rgba(0, 0, 0, 1);
-
-	}
-	99% {
-		visibility: hidden;
-		opacity: 0;
-	}
-	100% {
-		position: absolute;
 	}
 }
 
