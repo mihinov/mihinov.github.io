@@ -5,7 +5,7 @@ function setProgress(percent, selector) {
   selector.querySelector('text').innerHTML = '<tspan>' + percent.toFixed(0) + '</tspan>%';
 }
 
-function circle (number, final, selector) {
+function circle(number, final, selector) {
 	let mainSelector = document.querySelector(selector);
 	let timer = setInterval(function () {
 		setProgress(number, mainSelector);
@@ -14,6 +14,7 @@ function circle (number, final, selector) {
 		}
 		number += 1;
 	}, 50);
+    
 }
 
 circle(0, 90, '.progress__container:nth-child(1)');
@@ -27,11 +28,13 @@ upShot.addEventListener('click', () => {
 	window.scrollTo(0, 0);
 });
 
+var cardsCircle = document.querySelector('.cards__progress__bar');
+
 window.addEventListener('scroll', () => {
 
     var posY = window.pageYOffset || document.documentElement.scrollTop;
 
-    function scrollUp () {
+    function scrollUp() {
         var maxHeight = document.documentElement.clientHeight/3;
         if (posY > maxHeight) {
             up__shot.classList.add('visible');
@@ -41,26 +44,52 @@ window.addEventListener('scroll', () => {
         }
     }
 
-    scrollUp();
-
-    var intro = document.querySelector('.intro');
-    var header = document.querySelector('.header');
-    var height__intro = intro.offsetHeight; // высота intro
-    if (posY+1 >= height__intro) { // если posY+1 > высоты intro, то появится header
-        header.classList.add('fixed');
-        header.classList.remove('unvisible');
-    } else {
-        header.classList.remove('fixed');
-        header.classList.add('unvisible');
+    function headerVisible() {
+        var intro = document.querySelector('.intro');
+        var header = document.querySelector('.header');
+        var height__intro = intro.offsetHeight; // высота intro
+        if (posY+1 >= height__intro) { // если posY+1 > высоты intro, то появится header
+            header.classList.add('fixed');
+            header.classList.remove('unvisible');
+        } else {   
+            if (header.classList.length == 2) {
+                header.classList.add('unvisible');
+            }
+            header.classList.remove('fixed');
+        }
     }
 
+    function visibleCircle(target) {
+        var targetPosition = {
+            top: window.pageYOffset + target.getBoundingClientRect().top,
+            left: window.pageXOffset + target.getBoundingClientRect().left,
+            right: window.pageXOffset + target.getBoundingClientRect().right,
+            bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+        },
+        windowPosition = {
+            top: window.pageYOffset,
+            left: window.pageXOffset,
+            right: window.pageXOffset + document.documentElement.clientWidth,
+            bottom: window.pageYOffset + document.documentElement.clientHeight
+        };
+
+        if (targetPosition.bottom > windowPosition.top &&
+            targetPosition.top < windowPosition.bottom &&
+            targetPosition.right > windowPosition.left &&
+            targetPosition.left < windowPosition.right) {
+            console.clear();
+            console.log('Вы видите элемент :)');
+            // сюда вставить код для анимации кругов
+        } else {
+            console.clear();
+        };
+    };
+
+    scrollUp();
+    headerVisible();
+    visibleCircle(cardsCircle);
+    
+
 });
 
-var button = document.querySelector(".button");
-button.addEventListener('click', () => {
-    let div = document.createElement('div');
-    div.className = "copy";
-    div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
-    document.body.append(div);
-});
 
