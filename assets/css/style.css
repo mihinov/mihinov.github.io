@@ -55,7 +55,7 @@ HEADER
 	width: 100%;
 	padding-bottom: 5px;
 	height: auto;
-	animation: 1s linear;
+	animation: .4s linear;
 }
 
 .header.fixed {
@@ -66,6 +66,7 @@ HEADER
 
 .header.unvisible {
 	animation-name: header__unvisible;
+	animation-duration: .5s;
 }
 
 @keyframes header__visible {
@@ -1739,6 +1740,12 @@ FOOTER
 
 	.clients .section__main__right {
 		margin-top: 40px;
+	}
+}
+
+@media (max-width: 896px) {
+	.cards__progress__bar {
+		max-width: 500px;
 	}
 }
 
