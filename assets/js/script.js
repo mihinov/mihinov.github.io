@@ -49,7 +49,7 @@ burger.addEventListener('click', () => {
 });
 
 main__nav.addEventListener('click', (target) => {
-    if (toggle == 'toggle' && target.target.className != 'nav__link') {
+    if (toggle == 'toggle') {
         toggle = false;
         up__shot.style.display = 'block';
         document.body.style.overflow = 'auto';
