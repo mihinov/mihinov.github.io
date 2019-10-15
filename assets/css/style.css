@@ -1761,14 +1761,14 @@ FOOTER
 		align-items: center;
 		padding: 0 10px;
 		animation: mainNavToggleOn .4s ease;
-		background-color: rgba(0, 0, 0, 0.95);
+		background-color: rgba(0, 0, 0, 0.90);
 	}
 	@keyframes mainNavToggleOn {
 		0% {
 			background-color: rgba(0, 0, 0, 0);
 		}
 		100% {
-			background-color: rgba(0, 0, 0, 0.95);
+			background-color: rgba(0, 0, 0, 0.90);
 		}
 	}
 	.main__nav.toggle .nav__link {
@@ -2046,6 +2046,17 @@ FOOTER
 }
 
 @media (max-height: 300px) {
+	.main__nav.toggle .nav__link {
+		margin: 0;
+		padding: 15px 0;
+	}
+	.main__nav.toggle .nav__link:first-child {
+		margin: 0;
+		padding: 15px 0;
+	}
+}
+
+@media (max-width: 280px) {
 	.main__nav.toggle .nav__link {
 		margin: 0;
 		padding: 15px 0;
