@@ -182,8 +182,13 @@ NAV
 
 .burger {
 	align-self: center;
-	opacity: 0;
-	visibility: hidden;
+	display: none;
+	transition: padding 0.3s ease,
+				right 0.3s ease;
+}
+
+.burger.toggle {
+	padding-right: 1px;
 }
 
 .burger div {
@@ -191,7 +196,20 @@ NAV
     height: 3px;
     background-color: white;
     margin: 5px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease,
+    			opacity 0.3s ease;
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px,-6px);
 }
 
 /*************** 
@@ -1077,9 +1095,9 @@ CARDS__PROGRESS__BAR
 
 .progressbar__thumb {
 	fill: transparent;
+	stroke-dasharray: 0 1;
 	stroke: #ff0036;
 	stroke-width: 2px;
-	transition: stroke-dasharray 0.05s linear;
 	transform-origin: center;
 	transform: rotate(180deg);
 }
@@ -1362,6 +1380,7 @@ SECTION SUPER__TEXT
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
+	text-decoration: none;
 	cursor: pointer;
 	opacity: 0;
 	transition: opacity 0.15s linear;
@@ -1720,11 +1739,35 @@ FOOTER
 
 @media (max-width: 951px) {
 	.burger {
-		opacity: 1;
-		visibility: visible;
+		display: block;
+	}
+	.burger.toggle {
+		margin-right: 0;
+		z-index: 3;
+		position: fixed;
+		right: 24px;
 	}
 	.nav__link {
 		display: none;
+	}
+	.main__nav.toggle {
+		height: 100vh;
+		z-index: 3;
+		width: 100vw;
+		background: black;
+		opacity: 0.95;
+		position: fixed;
+		top: 0;
+		left: 0;
+		flex-direction: column;
+		align-items: center;
+	}
+	.main__nav.toggle .nav__link {
+		display: block;
+		font-size: 26px;
+	}
+	.main__nav.toggle .nav__link:first-child {
+		margin: 0 10px;
 	}
 }
 
