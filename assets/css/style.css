@@ -1761,33 +1761,34 @@ FOOTER
 		left: 0;
 		flex-direction: column;
 		align-items: center;
+		padding: 0;
 	}
 	.main__nav.toggle .nav__link {
 		display: block;
 		font-size: 26px;
-		animation: navLinkToggle .7s ease;
+		animation: navLinkToggle 1s ease;
 	}
 	.main__nav.toggle .nav__link:first-child {
 		margin: 0 10px;
-		animation-duration: .35s;
+		animation-duration: .500s;
 	}
 	.main__nav.toggle .nav__link:nth-child(2) {
-		animation-duration: .4s;
+		animation-duration: .550s;
 	}
 	.main__nav.toggle .nav__link:nth-child(3) {
-		animation-duration: .45s;
+		animation-duration: .600s;
 	}
 	.main__nav.toggle .nav__link:nth-child(4) {
-		animation-duration: .50s;
+		animation-duration: .650s;
 	}
 	.main__nav.toggle .nav__link:nth-child(5) {
-		animation-duration: .55s;
+		animation-duration: .700s;
 	}
 	.main__nav.toggle .nav__link:nth-child(6) {
-		animation-duration: .6s;
+		animation-duration: .750s;
 	}
 	.main__nav.toggle .nav__link:nth-child(7) {
-		animation-duration: .65s;
+		animation-duration: .875s;
 	}
 
 	@keyframes navLinkToggle {
