@@ -1751,17 +1751,25 @@ FOOTER
 		display: none;
 	}
 	.main__nav.toggle {
-		height: 100vh;
+		height: 100%;
 		z-index: 3;
-		width: 100vw;
-		background: black;
-		opacity: 0.95;
+		width: 100%;
 		position: fixed;
 		top: 0;
 		left: 0;
 		flex-direction: column;
 		align-items: center;
-		padding: 0;
+		padding: 0 10px;
+		animation: mainNavToggleOn .4s ease;
+		background-color: rgba(0, 0, 0, 0.95);
+	}
+	@keyframes mainNavToggleOn {
+		0% {
+			background-color: rgba(0, 0, 0, 0);
+		}
+		100% {
+			background-color: rgba(0, 0, 0, 0.95);
+		}
 	}
 	.main__nav.toggle .nav__link {
 		display: block;
@@ -2000,5 +2008,50 @@ FOOTER
 
 	.img__wrapper img {
 		min-width: 172px;
+	}
+}
+
+@media (max-height: 600px) {
+	.main__nav.toggle .nav__link {
+		font-size: 20px;
+	}
+}
+
+@media (max-height: 550px) {
+	.main__nav.toggle .nav__link {
+		font-size: 24px;
+		margin: 20px 0;
+	}
+	.main__nav.toggle .nav__link:first-child {
+		margin: 20px 0;
+	}
+}
+
+@media (max-height: 455px) {
+	.main__nav.toggle .nav__link {
+		margin: 10px 0;
+	}
+	.main__nav.toggle .nav__link:first-child {
+		margin: 10px 0;
+	}
+}
+
+@media (max-height: 370px) {
+	.main__nav.toggle .nav__link {
+		margin: 0;
+	}
+	.main__nav.toggle .nav__link:first-child {
+		margin: 0;
+	}
+}
+
+@media (max-height: 300px) {
+	.main__nav.toggle .nav__link {
+		margin: 0;
+		padding: 15px 0;
+	}
+	.main__nav.toggle .nav__link:first-child {
+		margin: 0;
+		padding: 15px 0;
 	}
 }
