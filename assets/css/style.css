@@ -372,7 +372,6 @@ SECTION
 
 .section__main__left {
 	max-width: 550px;
-	min-width: 350px;
 }
 
 /*************** 
@@ -1272,7 +1271,6 @@ SECTION BESTSELLER
 }
 
 .bestseller__card {
-	min-width: 280px;
 	margin: 0 10px 50px 10px;
 }
 
@@ -1297,7 +1295,7 @@ SECTION BESTSELLER
 	content: 'year';
 	position: absolute;
 	top: 75%;
-	left: 80%;
+	left: 88%;
 	transform: translate(-80%, -75%);
 }
 
