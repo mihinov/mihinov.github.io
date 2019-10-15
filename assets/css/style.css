@@ -1765,9 +1765,39 @@ FOOTER
 	.main__nav.toggle .nav__link {
 		display: block;
 		font-size: 26px;
+		animation: navLinkToggle .7s ease;
 	}
 	.main__nav.toggle .nav__link:first-child {
 		margin: 0 10px;
+		animation-duration: .35s;
+	}
+	.main__nav.toggle .nav__link:nth-child(2) {
+		animation-duration: .4s;
+	}
+	.main__nav.toggle .nav__link:nth-child(3) {
+		animation-duration: .45s;
+	}
+	.main__nav.toggle .nav__link:nth-child(4) {
+		animation-duration: .50s;
+	}
+	.main__nav.toggle .nav__link:nth-child(5) {
+		animation-duration: .55s;
+	}
+	.main__nav.toggle .nav__link:nth-child(6) {
+		animation-duration: .6s;
+	}
+	.main__nav.toggle .nav__link:nth-child(7) {
+		animation-duration: .65s;
+	}
+
+	@keyframes navLinkToggle {
+		0% {
+			transform: translateX(-600px);
+		}
+
+		100% {
+			transform: translateX(0px);
+		}
 	}
 }
 
