@@ -120,7 +120,6 @@ window.addEventListener('scroll', () => {
                 if (circleStartBoolean[i] == false) {
                     circleStartBoolean[i] = true;
                     circle(num, i);
-                    console.log(1);
                 }
         }
     };
