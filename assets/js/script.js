@@ -25,7 +25,7 @@ function circle(final, i) {
 	function circleStep() {
         myReq = reqAnimFrame(circleStep);
         setProgress(number, mainSelector);
-        if (number == final) {
+        if (number >= final) {
             cancelAnimationFrame(myReq);
         }
         number++;
