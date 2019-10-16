@@ -1736,6 +1736,10 @@ FOOTER
 }
 
 @media (max-width: 951px) {
+	.logo__a {
+		width: 140px; /* 100% */
+		height: 60.2px; /* 43% */
+	}
 	.burger {
 		display: block;
 	}
