@@ -15,7 +15,6 @@ function setProgress(percent, selector) {
     let total = Math.PI * circle.r.baseVal.value;
     circle.style.strokeDasharray = `${total*percent/100} ${total*(1-percent/100)*2}`;
     selector.querySelector('text').innerHTML = '<tspan>' + percent.toFixed(0) + '</tspan>%';
-    console.log(percent.toFixed(0));
 }
 
 function circle(final, i) {
