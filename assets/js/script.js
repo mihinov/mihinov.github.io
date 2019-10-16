@@ -35,7 +35,6 @@ function circle(final, i) {
 
 var burger = document.querySelector('.burger'); // BURGER
 var main__nav = document.querySelector('.main__nav');// MAIN__NAV
-var dataCircle = document.getElementsByClassName('progressbar__thumb');
 var toggle = false;
 
 burger.addEventListener('click', () => {
@@ -63,6 +62,7 @@ main__nav.addEventListener('click', (target) => {
 });
 
 var up__shot = document.querySelector('.up__shot');
+var dataCircle = document.getElementsByClassName('progressbar__thumb');
 var attr = [];
 var circleStartBoolean = [];
 for (let k = 0; k < dataCircle.length; k++) {
@@ -99,7 +99,7 @@ window.addEventListener('scroll', () => {
         }
     }
 
-    function visibleCircle(i, attr, target) {
+    function visibleCircle(i, num, target) {
         var targetPosition = {
             top: window.pageYOffset + target.getBoundingClientRect().top,
             left: window.pageXOffset + target.getBoundingClientRect().left,
@@ -117,12 +117,10 @@ window.addEventListener('scroll', () => {
             targetPosition.top + 50 < windowPosition.bottom &&
             targetPosition.right > windowPosition.left &&
             targetPosition.left < windowPosition.right) {
-            for (let i = 0; i < dataCircle.length; i++) {
                 if (circleStartBoolean[i] == false) {
                     circleStartBoolean[i] = true;
-                circle(attr, i);
-            }
-            }
+                    circle(num, i);
+                }
         }
     };
 
