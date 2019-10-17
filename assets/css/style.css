@@ -446,10 +446,11 @@ SECTION__HR
 ****************/
 
 .section__hr {
-	width: 50%;
+	width: 100%;
 	height: 2px;
 	background: #262626;
 	margin: 100px auto 0 auto;
+	max-width: 600px;
 }
 
 .hexagon {
@@ -913,6 +914,8 @@ CLIENTS SECTION__MAIN__RIGHT
 
 .clients .section__main__right img {
 	margin-bottom: 30px;
+	max-width: 100%;
+	height: auto;
 }
 
 .clients .section__main__right img:nth-child(2n+1) {
@@ -937,6 +940,7 @@ RED__HEXAGON
 	margin-top: 0;
 	background-color: #ff0036;
 	width: 75%;
+	max-width: 100%;
 }
 
 .red__hexagon .hexagon {
@@ -981,6 +985,11 @@ SECTION TEAMWORK
 
 .card__teamwork__img {
 	position: relative;
+}
+
+.card__teamwork__img img {
+	max-width: 100%;
+	height: auto;
 }
 
 .card__teamwork__img:before {
@@ -1081,9 +1090,8 @@ CARDS__PROGRESS__BAR
 }
 
 .progress__container {
-	width: 200px;
+	max-width: 200px;
 	margin-bottom: 50px;
-	padding: 0 25px;
 }
 
 .progressbar__track {
@@ -1175,11 +1183,9 @@ SECTION SERVICES
 	text-transform: uppercase;
 	background: url(../img/section__6/1.png) no-repeat;
 	height: 57px;
-	line-height: 57px;
 	margin-bottom: 30px;
-	padding: 0 0 0 80px;
+	padding: 16px 0 0 80px;
 	transition: 0.15s linear background-image;
-	display: inline-block;
 }
 
 .card__services-text {
@@ -1259,7 +1265,7 @@ SECTION BESTSELLER
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	margin-top: 70px;
+	margin: 70px auto 0;
 	text-align: center;
 	justify-content: center;
 	color: black;
@@ -1308,7 +1314,7 @@ SECTION BESTSELLER
 	font-family: 'Lato', sans-serif;
 	border: 1px solid #e7e7e7;
 	border-top: none;
-	padding: 10px 0;
+	padding: 10px 7.5px;
 }
 
 .container__card__button {
@@ -1338,6 +1344,7 @@ SECTION BESTSELLER
 
 .bestseller__card:hover .bestseller__card__button {
 	background-color: #ff0036;
+	cursor: pointer;
 }
 
 /*************** 
@@ -1722,16 +1729,25 @@ FOOTER
 	}
 }
 
-@media (max-width: 1090px) {
-	.nav__link {
-		margin: 0 10px;
+@media (max-width: 1160px) {
+	.bestseller__cards {
+		max-width: 700px;
 	}
 }
 
 @media (max-width: 1090px) {
+	.nav__link {
+		margin: 0 10px;
+	}
 	.super__ipad__option {
 		font-size: 16px;
 		padding: 10px 10px;
+	}
+}
+
+@media (max-width: 1017px) {
+	.progress__container {
+		max-width: 150px;
 	}
 }
 
@@ -1851,12 +1867,6 @@ FOOTER
 	}
 }
 
-@media (max-width: 896px) {
-	.cards__progress__bar {
-		max-width: 500px;
-	}
-}
-
 @media (max-width: 847px) {
 
 	.section__1 .section__main__right {
@@ -1877,6 +1887,18 @@ FOOTER
 
 	.section__main__right .super__ipad__option {
 		border-left: 0;
+	}
+}
+
+@media (max-width: 830px) {
+	.cards__progress__bar {
+		max-width: 550px;
+	}
+	.progress__container {
+		max-width: 200px;
+	}
+	.progress__subtitle {
+		font-size: 18px;
 	}
 }
 
@@ -1906,7 +1928,7 @@ FOOTER
 	}
 
 	.card__services {
-		max-width: 80%;
+		max-width: 95%;
 	}
 
 	.section__1 .section__main {
@@ -1985,6 +2007,12 @@ FOOTER
 
 }
 
+@media (max-width: 575px) {
+	.cards__progress__bar {
+		max-width: 350px;
+	}
+}
+
 @media (max-width: 516px) {
 	
 	.follow__item__text {
@@ -1994,12 +2022,27 @@ FOOTER
 	.follow__items {
 		max-width: 210px;
 	}
+	.section {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 400px) {
+	.card__services-title {
+		font-size: 17px;
+	}
 }
 
 @media (max-width: 339px) {
 	.super__ipad__button {
 		font-size: 1em;
 		padding: 5% 5%;
+	}
+}
+@media (max-width: 305px) {
+	.card__services:nth-child(6) .card__services-title {
+		padding-top: 9px;
 	}
 }
 
@@ -2012,6 +2055,18 @@ FOOTER
 		min-width: 172px;
 	}
 }
+
+@media (max-width: 250px) {
+	.card__services {
+		max-width: 100%;
+	}
+}
+
+
+
+
+
+
 
 @media (max-height: 600px) {
 	.main__nav.toggle .nav__link {
