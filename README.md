@@ -1,2 +1,1 @@
-# mihinov.github.io
-MyProjects
+# <a>mihinov.github.io</a>
