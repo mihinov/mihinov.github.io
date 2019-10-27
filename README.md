@@ -1,1 +1,1 @@
-# <a href="https://mihinov.github.io/">mihinov.github.io</a>
+# <a href="https://mihinov.github.io/" target="_blank">mihinov.github.io</a>
