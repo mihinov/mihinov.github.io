@@ -459,6 +459,7 @@ SECTION__HR
 	background: #262626;
 	position: relative;
 	margin: -13.5px auto 0 auto;
+	transform: translateZ(0);
 }
 
 .hexagon:before {
