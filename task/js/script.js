@@ -16,9 +16,6 @@ add__input.addEventListener('keydown', (event)=>{
 
 if (localStorage.getItem('arrTask') !== null) {
     arrTask = JSON.parse(localStorage.getItem('arrTask'));
-    for (let i = 0; i < task.length; i++) {
-        task[i].remove();
-    }
     for (let i = 0; i < arrTask.length; i++) {
         let text = arrTask[i][0];
         let id = arrTask[i][1];
@@ -26,15 +23,16 @@ if (localStorage.getItem('arrTask') !== null) {
     }   
 } else {
     arrTask = [];
-    for (let i = 0; i < task.length; i++) {
-        let text = task[i].innerText;
-        let id = task[i].getAttribute('data-id');
-        arrTask.unshift([text, id]);
+    function addElemStart(text, id) {
+        arrTask.push([text, id]);
+        localStorage.setItem('arrTask', JSON.stringify(arrTask));
+        addElem(text, id);
     }
-    localStorage.setItem('arrTask', JSON.stringify(arrTask));
+    addElemStart('Моя первая задача', 0);
+    addElemStart('Моя вторая задача', 1);
 }
 
-
+startClose();
 
 function addElem(localHtml, localId) {
     if (add__input.value === '' && localHtml === undefined) {
@@ -72,13 +70,13 @@ function addElem(localHtml, localId) {
     }
     block.setAttribute('data-listener', false);
     tasks.prepend(block);
-    task = tasks.querySelectorAll('.task');
     startClose(localHtml, localId);
 }
 // function addElem()
 
 function startClose(localHtml, localId) {
     task__close = tasks.querySelectorAll('.task__close');
+    task = tasks.querySelectorAll('.task');
     for (let i = 0; i < task.length; i++) {
         if (task[i].getAttribute('data-listener') == 'false') {
             task__close[i].addEventListener('click', (event)=> {
