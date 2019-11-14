@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+<body>
+
+	<section class="section">
+		<div class="container">
+			<div class="spheres">
+				<div class="sphere health">
+					<div class="svg__icon">
+						<img src="img/health.svg" alt="">
+					</div>
+					<div class="sphere__title">
+						Здоровье
+					</div>
+				</div>
+				<div class="sphere intelligence">
+					<div class="svg__icon">
+						<img src="img/intelligence.svg" alt="">
+					</div>
+					<div class="sphere__title">
+						Развитие
+					</div>
+				</div>
+				<div class="sphere sociality">
+					<div class="svg__icon">
+						<img src="img/sociality.svg" alt="">
+					</div>
+					<div class="sphere__title">
+						Отношения
+					</div>
+				</div>
+			</div>  <!-- .spheres -->
+		</div> <!-- .container -->
+
+		<div class="container fluid">
+			<div class="add">
+				<div class="add__title">
+					Добавить задачу
+				</div>
+				<div class="add__input-wrapper">
+					<input type="text" placeholder="Бег 1 км" class="add__input">
+					<div class="add__button"></div>
+				</div>
+			</div>
+		</div> <!-- .container.fluid -->
+
+		<div class="container">	
+			<div class="tasks">
+				<div class="task" data-id="1" data-listener='false'>
+					<div class="task__close"></div>
+					Моя 2 задача
+				</div>
+				<div class="task" data-id="0" data-listener='false'>
+					<div class="task__close"></div>
+					Моя 1 задача
+				</div>
+			</div>
+		</div> <!-- .container -->
+	
+	</section>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
