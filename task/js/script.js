@@ -2,7 +2,17 @@ let task, tasks, task__close, arrTask;
 let add__button = document.querySelector('.add__button');
 let add__input = document.querySelector('.add__input');
 tasks = document.querySelector('.tasks');
-task = [...tasks.querySelectorAll('.task')];
+task = tasks.querySelectorAll('.task');
+
+add__button.addEventListener('click', ()=>{
+    addElem();
+});
+
+add__input.addEventListener('keydown', (event)=>{
+    if (event.code == 'Enter' || event.keyCode == '13' || event.key == 'Enter') {
+        addElem();
+    }
+});
 
 if (localStorage.getItem('arrTask') !== null) {
     arrTask = JSON.parse(localStorage.getItem('arrTask'));
@@ -13,7 +23,7 @@ if (localStorage.getItem('arrTask') !== null) {
         let text = arrTask[i][0];
         let id = arrTask[i][1];
         addElem(text, id);
-    }
+    }   
 } else {
     arrTask = [];
     for (let i = 0; i < task.length; i++) {
@@ -23,6 +33,8 @@ if (localStorage.getItem('arrTask') !== null) {
     }
     localStorage.setItem('arrTask', JSON.stringify(arrTask));
 }
+
+
 
 function addElem(localHtml, localId) {
     if (add__input.value === '' && localHtml === undefined) {
@@ -50,6 +62,8 @@ function addElem(localHtml, localId) {
         arrTask.push([text, id]);
         localStorage.setItem('arrTask', JSON.stringify(arrTask));
 
+        localHtml = add__input.value;
+        localId = id;
         add__input.value = '';
     } else {
         // Если это добавление блока ИЗ локального хранилища
@@ -83,20 +97,6 @@ function startClose(localHtml, localId) {
     }
 }
 // function startClose()
-
-add__button.addEventListener('click', ()=>{
-    addElem();
-}
-);
-
-add__input.addEventListener('keydown', (event)=>{
-    if (event.code == 'Enter' || event.keyCode == '13' || event.key == 'Enter') {
-        addElem();
-    }
-}
-);
-
-startClose();
 
 function addNext(arr) {
     for (let i = 0; i < arr.length; i++) {
