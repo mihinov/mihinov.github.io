@@ -29,7 +29,6 @@ if (localStorage.getItem('arrTask') !== null) {
         addElem(text, id);
     }
     addElemStart('Моя первая задача', 0);
-    addElemStart('Моя вторая задача', 1);
 }
 
 startClose();
