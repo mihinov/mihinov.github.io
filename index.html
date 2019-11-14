@@ -3,64 +3,760 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Ежедневник</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:400,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Creativia</title>
 </head>
 <body>
-
-	<section class="section">
+	<header class="header">
 		<div class="container">
-			<div class="spheres">
-				<div class="sphere health">
-					<div class="svg__icon">
-						<img src="img/health.svg" alt="">
+			<div class="header__inner">
+				<div class="logo">
+					<a href="#" class="logo__a">
+						<img class="logo__img" src="assets/img/logo.png" alt="">
+					</a>
+				</div>
+				<nav class="main__nav">
+					<a href="#home" class="nav__link">Home</a>
+					<a href="#about__us" class="nav__link">About us</a>
+					<a href="#portfolio" class="nav__link">Portfolio</a>
+					<a href="#clients" class="nav__link">Clients</a>
+					<a href="#team" class="nav__link">Team</a>
+					<a href="#services" class="nav__link">Services</a>
+					<a href="#blog" class="nav__link">Blog</a>
+					<a href="#contact" class="nav__link">Contact</a>
+				</nav>
+				<div class="burger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="home" class="intro">
+		<div class="container">
+			<div class="intro__inner">
+				<p class="intro__title">
+					why <span>creativia?</span>
+				</p>
+				<p class="intro__suptitle">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae.
+				</p>
+				<div class="intro__buttons">
+					<a href="#" class="button">Features</a>
+					<a href="#" class="button">Free PSD</a>
+				</div>
+				<a href="#"class="intro__btn__slider intro__btn__slider__prev"></a>
+				<a href="#"class="intro__btn__slider intro__btn__slider__next"></a>
+			</div> <!-- .intro__inner -->
+		</div>
+	</div>
+
+	<section id="about__us" class="section section__1">
+		<div class="container">
+
+			<div class="section__header">
+				<p class="section__title">
+					about <span>Creativia</span>
+				</p>
+				<p class="section__subtitle">
+					Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.
+				</p>
+			</div> <!-- .section__header -->
+
+			<div class="section__main">
+
+				<div class="section__main__left">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae.</p>
+					<div class="section__accordion">
+
+						<div class="accordion__item">
+							<div class="accordion__item__flex">
+								<div class="accordion__img"></div>
+								<div class="accordion__title">Who is creativia</div>
+							</div>
+							<p class="accordion__text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
+							</p>
+						</div>
+
+						<div class="accordion__item">
+							<div class="accordion__item__flex off">
+								<div class="accordion__img"></div>
+								<div class="accordion__title">Experiences</div>
+							</div>
+						</div>
+
+						<div class="accordion__item">
+							<div class="accordion__item__flex off">
+								<div class="accordion__img"></div>
+								<div class="accordion__title">Learn more</div>
+							</div>
+						</div>
+
 					</div>
-					<div class="sphere__title">
-						Здоровье
+				</div> <!-- .section__main__left -->
+
+				<div class="section__main__right">
+					<img class="section__main__right__img" src="assets/img/section__1/super__img.png" alt="">
+				</div>
+
+			</div> <!-- .section__main -->
+
+			<div class="section__wrap__hr">
+				<div class="section__hr">
+				</div>
+				<div class="hexagon"></div>
+			</div>
+
+			<div class="section__cards">
+				<div class="section__card__wrapper">
+					<div class="section__card">
+						<div class="section__card__img"></div>
+					</div>
+					<div class="section__card__title">Flat design</div>
+					<div class="section__card__text">
+					Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet
 					</div>
 				</div>
-				<div class="sphere intelligence">
-					<div class="svg__icon">
-						<img src="img/intelligence.svg" alt="">
+				<div class="section__card__wrapper">
+					<div class="section__card">
+						<div class="section__card__img"></div>
 					</div>
-					<div class="sphere__title">
-						Развитие
-					</div>
-				</div>
-				<div class="sphere sociality">
-					<div class="svg__icon">
-						<img src="img/sociality.svg" alt="">
-					</div>
-					<div class="sphere__title">
-						Отношения
+					<div class="section__card__title">Retina ready</div>
+					<div class="section__card__text">
+					Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet
 					</div>
 				</div>
-			</div>  <!-- .spheres -->
+				<div class="section__card__wrapper">
+					<div class="section__card">
+						<div class="section__card__img"></div>
+					</div>
+					<div class="section__card__title">Responsive</div>
+					<div class="section__card__text">
+					Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet
+					</div>
+				</div>
+				<div class="section__card__wrapper">
+					<div class="section__card">
+						<div class="section__card__img"></div>
+					</div>
+					<div class="section__card__title">Clean & Useful</div>
+					<div class="section__card__text">
+					Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet
+					</div>
+				</div>
+			</div> <!-- .section__card -->
+		</div> <!-- .container -->
+	</section>
+	<section id="portfolio" class="section portfolio">
+		<div class="container">
+
+			<div class="section__header">
+				<div class="section__title">Portfolio</div>
+				<div class="section_links">
+					<a href="#" class="section__link">All</a>
+					<a href="#" class="section__link">Illustration</a>
+					<a href="#" class="section__link">Digital art</a>
+					<a href="#" class="section__link">Web design</a>
+				</div>
+			</div> <!-- section__header -->
+
 		</div> <!-- .container -->
 
 		<div class="container fluid">
-			<div class="add">
-				<div class="add__title">
-					Добавить задачу
-				</div>
-				<div class="add__input-wrapper">
-					<input type="text" placeholder="Бег 1 км" class="add__input">
-					<div class="add__button"></div>
-				</div>
-			</div>
-		</div> <!-- .container.fluid -->
+			<div class="portfolio__images">
 
-		<div class="container">	
-			<div class="tasks">
-				<div class="task" data-id="0" data-listener='false'>
-					<div class="task__close"></div>
-					Моя 1 задача
-				</div>
-			</div>
-		</div> <!-- .container -->
-	
+				<div class="row">
+					<div class="half__row">
+						<div class="potfolio__item">
+							<img src="assets/img/section__2/portfolio__1.png" alt="">
+							<div class="portfolio__info">
+								<div class="portfolio__icon"></div>
+								<div class="portfolio__title">Design name</div>
+							</div>
+						</div>
+						<div class="potfolio__item">
+							<img src="assets/img/section__2/portfolio__2.png" alt="">
+							<div class="portfolio__info">
+								<div class="portfolio__icon"></div>
+								<div class="portfolio__title">Design name</div>
+							</div>
+						</div>
+					</div>
+					<div class="half__row">
+						<div class="potfolio__item">
+							<img src="assets/img/section__2/portfolio__3.png" alt="">
+							<div class="portfolio__info">
+								<div class="portfolio__icon"></div>
+								<div class="portfolio__title">Design name</div>
+							</div>
+						</div>
+						<div class="potfolio__item">
+							<img src="assets/img/section__2/portfolio__4.png" alt="">
+							<div class="portfolio__info">
+								<div class="portfolio__icon"></div>
+								<div class="portfolio__title">Design name</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .row -->
+			
+				<div class="row">
+					<div class="half__row">
+						<div class="potfolio__item">
+							<img src="assets/img/section__2/portfolio__5.png" alt="">
+							<div class="portfolio__info">
+								<div class="portfolio__icon"></div>
+								<div class="portfolio__title">Design name</div>
+							</div>
+						</div>
+						<div class="potfolio__item">
+							<img src="assets/img/section__2/portfolio__6.png" alt="">
+							<div class="portfolio__info">
+								<div class="portfolio__icon"></div>
+								<div class="portfolio__title">Design name</div>
+							</div>
+						</div>
+					</div>
+					<div class="half__row">
+						<div class="potfolio__item">
+							<img src="assets/img/section__2/portfolio__7.png" alt="">
+							<div class="portfolio__info">
+								<div class="portfolio__icon"></div>
+								<div class="portfolio__title">Design name</div>
+							</div>
+						</div>
+						<div class="potfolio__item">
+							<img src="assets/img/section__2/portfolio__8.png" alt="">
+							<div class="portfolio__info">
+								<div class="portfolio__icon"></div>
+								<div class="portfolio__title">Design name</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .row -->
+
+			</div> <!-- .portfolio__images -->
+		</div> <!-- .container__fluid -->
+
 	</section>
 
-	<script src="js/script.js"></script>
+	<section class="section super__ipad">
+		<div class="container">
+			<div class="section__wrap__hr red__hexagon">
+				<div class="section__hr">
+				</div>
+				<div class="hexagon"></div>
+			</div>
+			<div class="section__header">
+				<p class="section__title">
+					our <span>Product features</span>
+				</p>
+				<p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+			</div>
+			<div class="section__main">
+				
+				<div class="section__main__left">
+					<div class="wrapper__options">
+						<div class="super__ipad__option">
+							<span>Unlimited color options</span>
+							<div class="super__ipad__img"></div>
+						</div>
+						<div class="super__ipad__option">
+							<span>Outstanding support</span>
+							<div class="super__ipad__img"></div>
+						</div>
+						<div class="super__ipad__option">
+							<span>Retina ready</span>
+							<div class="super__ipad__img"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="img__wrapper">
+					<img src="assets/img/section__3/ipad.png" alt="">
+					<a href="#" class="button super__ipad__button">Free PSD</a>
+				</div>
+
+				<div class="section__main__right">
+					<div class="wrapper__options">
+						<div class="super__ipad__option">
+							<div class="super__ipad__img"></div> 
+							<span>Unlimited color options</span>
+						</div>
+						<div class="super__ipad__option">
+							<div class="super__ipad__img"></div> 
+							<span>Outstanding support</span>
+						</div>
+						<div class="super__ipad__option">
+							<div class="super__ipad__img"></div> 
+							<span>Retina ready</span>
+						</div>
+					</div>
+				</div>
+				
+			</div> <!-- .section__main -->
+		</div> <!-- .container -->
+	</section>
+
+	<section id="clients" class="section clients">
+		<div class="container">
+			
+			<div class="section__header">
+				<p class="section__title">
+					our <span>clients</span>
+				</p>
+				<p class="section__subtitle">
+					Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis
+				</p>
+			</div>
+
+			<div class="section__main">
+
+				<div class="section__main__left">
+
+					<p class="clients__title">Happy clients say</p>
+					<p class="clients__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis</p>
+					<div class="clients__card">
+						<img src="assets/img/section__4/chuvak.png" alt="">
+						<p class="clients__name">Amr Srour</p>
+						<div class="clients__carousel">
+							<div class="clients__carousel__tab"></div>
+							<div class="clients__carousel__tab active"></div>
+							<div class="clients__carousel__tab"></div>
+						</div>
+					</div>
+
+				</div> <!-- .section__main__left -->
+
+				<div class="section__main__right">
+					<img src="assets/img/section__4/company__name__1.png" alt="">
+					<img src="assets/img/section__4/company__name__2.png" alt="">
+					<img src="assets/img/section__4/company__name__3.png" alt="">
+					<img src="assets/img/section__4/company__name__4.png" alt="">
+				</div> <!-- .section__main__right -->
+
+			</div> <!-- .section__main -->
+
+		</div> <!-- .container -->
+	</section>
+
+	<section id="team" class="section teamwork">
+		<div class="container">
+			<div class="section__wrap__hr red__hexagon">
+				<div class="section__hr">
+				</div>
+				<div class="hexagon"></div>
+			</div>
+			<div class="section__header">
+				<p class="section__title">
+					our <span>Teamwork</span>
+				</p>
+				<p class="section__subtitle">
+					Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis
+				</p>
+			</div>
+			<div class="section__cards">
+
+				<div class="card__teamwork">
+					<div class="card__teamwork__img">
+						<img src="assets/img/section__5/chuvak__2.png" alt="">
+						<div class="card__teamwork__social">
+							<img src="assets/img/section__5/social__facebook.png" alt="">
+							<img src="assets/img/section__5/social__twitter.png" alt="">
+						</div>
+					</div>
+					<div class="card__subimg">
+						<div class="card__title">Bruce Wayne</div>
+						<div class="card__subtitle">Webdesigner</div>
+					</div>
+				</div> <!-- .card__teamwork -->
+
+				<div class="card__teamwork">
+					<div class="card__teamwork__img">
+						<img src="assets/img/section__5/chuvak__1.png" alt="">
+						<div class="card__teamwork__social">
+							<img src="assets/img/section__5/social__facebook.png" alt="">
+							<img src="assets/img/section__5/social__twitter.png" alt="">
+						</div>
+					</div>
+					<div class="card__subimg">
+						<div class="card__title">Amr Srour</div>
+						<div class="card__subtitle">Webdesigner</div>
+					</div>
+				</div> <!-- .card__teamwork -->
+
+				<div class="card__teamwork">
+					<div class="card__teamwork__img">
+						<img src="assets/img/section__5/chuvak__3.png" alt="">
+						<div class="card__teamwork__social">
+							<img src="assets/img/section__5/social__facebook.png" alt="">
+							<img src="assets/img/section__5/social__twitter.png" alt="">
+						</div>
+					</div>
+					<div class="card__subimg">
+						<div class="card__title">Sarah Doe</div>
+						<div class="card__subtitle">Webdesigner</div>
+					</div>
+				</div> <!-- .card__teamwork -->
+
+				<div class="card__teamwork">
+					<div class="card__teamwork__img">
+						<img src="assets/img/section__5/chuvak__2.png" alt="">
+						<div class="card__teamwork__social">
+							<img src="assets/img/section__5/social__facebook.png" alt="">
+							<img src="assets/img/section__5/social__twitter.png" alt="">
+						</div>
+					</div>
+					<div class="card__subimg">
+						<div class="card__title">Johan De</div>
+						<div class="card__subtitle">Webdesigner</div>
+					</div>
+				</div> <!-- .card__teamwork -->
+
+			</div> <!-- .section__cards -->
+		
+			<div class="section__wrap__hr">
+				<div class="section__hr">
+				</div>
+				<div class="hexagon"></div>
+			</div>
+
+			<div class="section__header section__header__circle">
+				<p class="section__title">
+					our <span>Skills</span>
+				</p>
+				<p class="section__subtitle">
+					Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis
+				</p>
+			</div>
+
+			<div class="cards__progress__bar">
+
+				<div class="progress__container">
+				  <svg class="progressbar" viewbox="0 0 64 64">
+				    <circle class="progressbar__track" cx="50%" cy="50%" r="30"></circle>
+				    <circle class="progressbar__thumb" cx="50%" cy="50%" r="30" data-circle="90"></circle>
+				    <text x=32 y=33 text-anchor=middle dominant-baseline=middle><tspan>0</tspan>%</text>
+				  </svg>
+				  <div class="progress__text">
+				  	<div class="progress__title">Photoshop</div>
+				  	<div class="progress__subtitle">Donec luctus tortor in placerat faucibus</div>
+				  </div>
+				</div> <!-- .progress__container -->
+
+				<div class="progress__container">
+				  <svg class="progressbar" viewbox="0 0 64 64">
+				    <circle class="progressbar__track" cx="50%" cy="50%" r="30"></circle>
+				    <circle class="progressbar__thumb" cx="50%" cy="50%" r="30" data-circle="80"></circle>
+				    <text x=32 y=33 text-anchor=middle dominant-baseline=middle><tspan>0</tspan>%</text>
+				  </svg>
+				  <div class="progress__text">
+				  	<div class="progress__title">HTML</div>
+				  	<div class="progress__subtitle">Donec luctus tortor in placerat faucibus</div>
+				  </div>
+				</div> <!-- .progress__container -->
+
+				<div class="progress__container">
+				  <svg class="progressbar" viewbox="0 0 64 64">
+				    <circle class="progressbar__track" cx="50%" cy="50%" r="30"></circle>
+				    <circle class="progressbar__thumb" cx="50%" cy="50%" r="30" data-circle="70"></circle>
+				    <text x=32 y=33 text-anchor=middle dominant-baseline=middle><tspan>0</tspan>%</text>
+				  </svg>
+				  <div class="progress__text">
+				  	<div class="progress__title">PHP</div>
+				  	<div class="progress__subtitle">Donec luctus tortor in placerat faucibus</div>
+				  </div>
+				</div> <!-- .progress__container -->
+
+				<div class="progress__container">
+				  <svg class="progressbar" viewbox="0 0 64 64">
+				    <circle class="progressbar__track" cx="50%" cy="50%" r="30"></circle>
+				    <circle class="progressbar__thumb" cx="50%" cy="50%" r="30" data-circle="90"></circle>
+				    <text x=32 y=33 text-anchor=middle dominant-baseline=middle><tspan>0</tspan>%</text>
+				  </svg>
+				  <div class="progress__text">
+				  	<div class="progress__title">WordPress</div>
+				  	<div class="progress__subtitle">Donec luctus tortor in placerat faucibus</div>
+				  </div>
+				</div> <!-- .progress__container -->
+
+			</div> <!-- .cards__progress__bar -->
+
+		</div> <!-- .container -->
+	</section>
+
+	<section id="services" class="section services">
+		<div class="container">
+			<div class="section__header">
+				<p class="section__title">
+					our <span>Services</span>
+				</p>
+				<p class="section__subtitle">
+					Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.
+				</p>
+			</div> <!-- .section__header -->
+
+			<div class="cards__services">
+
+				<div class="card__services">
+					<div class="card__services-title">Development</div>
+					<div class="card__services-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna Dapibus egestas in turpis and Praesent faucibus nisl sit amet nulla sollicitudin.
+					</div>
+				</div>
+				<div class="card__services">
+					<div class="card__services-title">HTML/CSS</div>
+					<div class="card__services-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna Dapibus egestas in turpis and Praesent faucibus nisl sit amet nulla sollicitudin.
+					</div>
+				</div>
+				<div class="card__services">
+					<div class="card__services-title">WordPress</div>
+					<div class="card__services-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna Dapibus egestas in turpis and Praesent faucibus nisl sit amet nulla sollicitudin.
+					</div>
+				</div>
+				<div class="card__services">
+					<div class="card__services-title">Applications</div>
+					<div class="card__services-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna Dapibus egestas in turpis and Praesent faucibus nisl sit amet nulla sollicitudin.
+					</div>
+				</div>
+				<div class="card__services">
+					<div class="card__services-title">UI/UX Design</div>
+					<div class="card__services-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna Dapibus egestas in turpis and Praesent faucibus nisl sit amet nulla sollicitudin.
+					</div>
+				</div>
+				<div class="card__services">
+					<div class="card__services-title">Responsive Layout</div>
+					<div class="card__services-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna Dapibus egestas in turpis and Praesent faucibus nisl sit amet nulla sollicitudin.
+					</div>
+				</div>
+					
+				</div>
+
+			</div> <!-- .cards__services -->
+		</div> <!-- .container -->
+	</section>
+
+	<section class="section bestseller">
+		<div class="container">
+			<div class="section__wrap__hr red__hexagon">
+				<div class="section__hr">
+				</div>
+				<div class="hexagon"></div>
+			</div>
+			<div class="section__header">
+				<p class="section__title">
+					plans <span>Bestseller</span>
+				</p>
+				<p class="section__subtitle">
+					Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.
+				</p>
+			</div> <!-- .section__header -->
+
+			<div class="bestseller__cards">
+				
+				<div class="bestseller__card">
+					<div class="bestseller__card__title">Reseller</div>
+					<div class="bestseller__card__price"><span>199$</span></div>
+					<div class="bestseller__card__information">CPU E3-1230 3.3GHz 8MB-V2</div>
+					<div class="bestseller__card__information">HARD 500GB SATA 7200 RPM</div>
+					<div class="bestseller__card__information">RAM 8GB DDR3 1333MHZ ECC</div>
+					<div class="bestseller__card__information">Traffic 10 TB</div>
+					<div class="bestseller__card__information">Connection 100 MB</div>
+					<div class="bestseller__card__information">SIP</div>
+					<div class="container__card__button">
+						<button class="bestseller__card__button">Order Now</button>
+					</div>
+				</div> <!-- .bestseller__card -->
+
+				<div class="bestseller__card">
+					<div class="bestseller__card__title">Reseller</div>
+					<div class="bestseller__card__price"><span>199$</span></div>
+					<div class="bestseller__card__information">CPU E3-1230 3.3GHz 8MB-V2</div>
+					<div class="bestseller__card__information">HARD 500GB SATA 7200 RPM</div>
+					<div class="bestseller__card__information">RAM 8GB DDR3 1333MHZ ECC</div>
+					<div class="bestseller__card__information">Traffic 10 TB</div>
+					<div class="bestseller__card__information">Connection 100 MB</div>
+					<div class="bestseller__card__information">SIP</div>
+					<div class="container__card__button">
+						<button class="bestseller__card__button">Order Now</button>
+					</div>
+				</div> <!-- .bestseller__card -->
+
+				<div class="bestseller__card">
+					<div class="bestseller__card__title">Reseller</div>
+					<div class="bestseller__card__price"><span>199$</span></div>
+					<div class="bestseller__card__information">CPU E3-1230 3.3GHz 8MB-V2</div>
+					<div class="bestseller__card__information">HARD 500GB SATA 7200 RPM</div>
+					<div class="bestseller__card__information">RAM 8GB DDR3 1333MHZ ECC</div>
+					<div class="bestseller__card__information">Traffic 10 TB</div>
+					<div class="bestseller__card__information">Connection 100 MB</div>
+					<div class="bestseller__card__information">SIP</div>
+					<div class="container__card__button">
+						<button class="bestseller__card__button">Order Now</button>
+					</div>
+				</div> <!-- .bestseller__card -->
+
+				<div class="bestseller__card">
+					<div class="bestseller__card__title">Reseller</div>
+					<div class="bestseller__card__price"><span>199$</span></div>
+					<div class="bestseller__card__information">CPU E3-1230 3.3GHz 8MB-V2</div>
+					<div class="bestseller__card__information">HARD 500GB SATA 7200 RPM</div>
+					<div class="bestseller__card__information">RAM 8GB DDR3 1333MHZ ECC</div>
+					<div class="bestseller__card__information">Traffic 10 TB</div>
+					<div class="bestseller__card__information">Connection 100 MB</div>
+					<div class="bestseller__card__information">SIP</div>
+					<div class="container__card__button">
+						<button class="bestseller__card__button">Order Now</button>
+					</div>
+				</div> <!-- .bestseller__card -->
+
+			</div> <!-- .bestseller__cards -->
+
+		</div>
+	</section>
+
+	<section class="section super__text">
+		<div class="container">
+			<div class="twitter__quote"></div>
+			<div class="quote">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.
+			</div>
+		</div>
+	</section>
+
+	<section id="blog" class="section blog">
+		<div class="container">
+			<div class="section__wrap__hr red__hexagon">
+				<div class="section__hr">
+				</div>
+				<div class="hexagon"></div>
+			</div>
+			<div class="section__header">
+				<p class="section__title">
+					our <span>Blog</span>
+				</p>
+				<p class="section__subtitle">
+					Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.
+				</p>
+			</div> <!-- .section__header -->
+			<div class="blog__posts">
+
+				<div class="blog__post">
+					<div class="blog__wrapper__img">
+						<img src="assets/img/section__9/blog__1.png" alt="">
+					</div>
+					<div class="blog__content">
+						<div class="blog__title">Lorem ipsum dolor sit amet, consectetur </div>
+						<div class="blog__icons">
+							<span class="blog__icon blog__icon__1">admin</span>
+							<span class="blog__icon blog__icon__2">13</span>
+							<span class="blog__icon blog__icon__3">708</span>
+						</div>
+						<div class="blog__text">Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...</div>
+						<a href="" class="blog__button">View more</a>
+					</div> <!-- .blog__content -->
+
+				</div> <!-- .blog__post -->
+
+				<div class="blog__post">
+					<div class="blog__wrapper__img">
+						<img src="assets/img/section__9/blog__2.png" alt="">
+					</div>
+					<div class="blog__content">
+						<div class="blog__title">Lorem ipsum dolor sit amet, consectetur </div>
+						<div class="blog__icons">
+							<span class="blog__icon blog__icon__1">admin</span>
+							<span class="blog__icon blog__icon__2">13</span>
+							<span class="blog__icon blog__icon__3">708</span>
+						</div>
+						<div class="blog__text">Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...</div>
+						<a href="" class="blog__button">View more</a>
+					</div> <!-- .blog__content -->
+
+				</div> <!-- .blog__post -->
+
+			</div> <!-- .blog__posts -->
+		</div> <!-- .container -->
+	</section>
+
+	<section id="contact" class="section follow">
+		<div class="container">
+
+			<div class="section__header">
+				<p class="section__title">
+					follow <span>Creativia</span>
+				</p>
+			</div> <!-- .section__header -->
+
+			<div class="follow__items">
+
+				<div class="follow__item">
+					<div class="follow__item__img">
+						<div class="follow__item__icon"></div>
+					</div>
+					<div class="follow__item__text">20000</div>
+				</div>
+
+				<div class="follow__item">
+					<div class="follow__item__img">
+						<div class="follow__item__icon"></div>
+					</div>
+					<div class="follow__item__text">99900</div>
+				</div>
+
+				<div class="follow__item">
+					<div class="follow__item__img">
+						<div class="follow__item__icon"></div>
+					</div>
+					<div class="follow__item__text">5000</div>
+				</div>
+
+				<div class="follow__item">
+					<div class="follow__item__img">
+						<div class="follow__item__icon"></div>
+					</div>
+					<div class="follow__item__text">200</div>
+				</div>
+
+			</div> <!-- .follow__items -->
+		</div> <!-- .container -->
+	</section>
+
+	<section class="section map">
+		<div class="container">
+			<div class="section__wrap__hr red__hexagon">
+				<div class="section__hr">
+				</div>
+				<div class="hexagon"></div>
+			</div>
+			<div class="section__header">
+				<p class="section__title">
+					fine us <span>Here</span>
+				</p>
+				<p class="section__subtitle">
+					Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.
+				</p>
+			</div> <!-- .section__header -->
+		</div> <!-- .container -->
+		<iframe class="google__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1769286.1870337543!2d30.924348941408216!3d29.99587525831851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2z0JrQsNC40YAsINCt0LvRjC3QmtCw0YXQuNGA0LAsINCV0LPQuNC_0LXRgg!5e0!3m2!1sru!2sru!4v1568194921718!5m2!1sru!2sru" allowfullscreen="true"></iframe>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__name">Creativia</div>
+		<div class="footer__author">Design by Amr Srour</div>
+	</footer>
+
+	<a href="#home" class="up__shot">Прыг</a>
+
+	<script src="assets/js/script.js"></script>
 </body>
 </html>
